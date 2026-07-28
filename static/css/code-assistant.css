@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Code Assistant CSS
+   ========================================================================== */
+
+.code-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    height: calc(100vh - 120px);
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* File Explorer Sidebar */
+.file-explorer {
+    border-right: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.explorer-header {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.file-list {
+    padding: var(--space-sm);
+    flex: 1;
+    overflow-y: auto;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.file-item:hover, .file-item.active {
+    background: rgba(91, 92, 235, 0.05);
+    color: var(--color-primary);
+}
+
+/* Editor Area */
+.editor-area {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.editor-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-light);
+    background: var(--bg-primary);
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-right: 1px solid var(--border-light);
+    cursor: pointer;
+    background: var(--bg-surface);
+    border-top: 2px solid var(--color-primary);
+}
+
+.code-view {
+    flex: 1;
+    padding: var(--space-md);
+    background: #fafafa;
+    overflow-y: auto;
+    font-family: var(--font-code);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+
+/* 3D Processor Overlay */
+.processor-canvas-container {
+    position: absolute;
+    bottom: var(--space-md);
+    right: var(--space-md);
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    z-index: var(--z-floating);
+    opacity: 0.9;
+}
+
+/* AI Assistant Sidebar */
+.ai-sidebar {
+    border-left: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary);
+}
+
+.ai-header {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--border-light);
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ai-chat {
+    flex: 1;
+    padding: var(--space-md);
+    overflow-y: auto;
+    font-size: 0.875rem;
+}
+
+.ai-input-area {
+    padding: var(--space-sm);
+    border-top: 1px solid var(--border-light);
+    background: var(--bg-surface);
+}
+
+.ai-input {
+    width: 100%;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    resize: none;
+}
+
+
+@media (max-width: 1024px) {
+    .code-layout {
+        grid-template-columns: 250px 1fr;
+    }
+    .ai-sidebar {
+        display: none; /* Hide AI on tablet, could use a toggle */
+    }
+}
+@media (max-width: 768px) {
+    .code-layout {
+        grid-template-columns: 1fr;
+    }
+    .file-explorer {
+        display: none;
+    }
+}

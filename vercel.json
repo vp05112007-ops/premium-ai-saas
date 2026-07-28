@@ -1,0 +1,36 @@
+{
+  "rewrites": [
+    {
+      "source": "/static/:path*",
+      "destination": "/static/:path*"
+    },
+    {
+      "source": "/auth/:path*",
+      "destination": "/templates/auth/:path*"
+    },
+    {
+      "source": "/public/:path*",
+      "destination": "/templates/public/:path*"
+    },
+    {
+      "source": "/dashboard/:path*",
+      "destination": "/templates/dashboard/:path*"
+    },
+    {
+      "source": "/profile.html",
+      "destination": "/templates/profile.html"
+    },
+    {
+      "source": "/settings.html",
+      "destination": "/templates/settings.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/templates/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/templates/index.html"
+    }
+  ]
+}

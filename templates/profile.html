@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Premium AI SaaS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/profile.css">
+</head>
+<body class="page-dashboard">
+
+    <!-- Navbar -->
+    <nav class="navbar glass-panel">
+        <div class="logo">
+            <a href="/templates/index.html" style="text-decoration: none; color: inherit;">
+                <span class="text-gradient">AI.</span>Core
+            </a>
+        </div>
+        
+        <div class="nav-links">
+            <a href="/templates/index.html" class="nav-link">Dashboard</a>
+            <a href="/templates/profile.html" class="nav-link active">Profile</a>
+            <a href="/templates/settings.html" class="nav-link">Settings</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="/templates/auth/login.html" class="btn btn-ghost" style="color: var(--color-error);">Sign Out</a>
+        </div>
+    </nav>
+
+    <main class="profile-layout" style="padding-top: 140px;">
+        
+        <!-- Left Column -->
+        <div class="profile-sidebar">
+            
+            <!-- User Header Card -->
+            <div class="profile-card user-header" style="margin-bottom: var(--space-xl);">
+                <div class="avatar-wrapper">
+                    <!-- Placeholder avatar (using a generic geometric shape via UI faces or Unsplash) -->
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&q=80" alt="User Avatar">
+                    <div class="avatar-badge"></div>
+                </div>
+                <h1 class="user-name">Alex Morgan</h1>
+                <p class="user-tagline">Senior Frontend Engineer & Designer</p>
+                <a href="/templates/settings.html" class="btn btn-primary">Edit Profile</a>
+            </div>
+
+            <!-- Personal Info Card -->
+            <div class="profile-card" style="margin-bottom: var(--space-xl);">
+                <h3 class="card-title">Personal Information</h3>
+                
+                <ul class="info-list">
+                    <li class="info-item">
+                        <span class="info-label">Full Name</span>
+                        <span class="info-value">Alex Morgan</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Username</span>
+                        <span class="info-value">@alexdesigns</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Email</span>
+                        <span class="info-value">alex.morgan@example.com</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Location</span>
+                        <span class="info-value">San Francisco, CA</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Occupation</span>
+                        <span class="info-value">Software Architect</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Bio</span>
+                        <span class="info-value" style="color: var(--text-secondary); line-height: 1.5; font-size: 0.9rem;">Passionate about building premium, immersive AI interfaces and pushing the boundaries of web design.</span>
+                    </li>
+                    <li class="info-item">
+                        <span class="info-label">Member Since</span>
+                        <span class="info-value">January 2024</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Connected Accounts (Sidebar) -->
+            <div class="profile-card">
+                <h3 class="card-title">Connected Accounts</h3>
+                <div class="connection-list">
+                    <div class="connection-item">
+                        <div class="connection-info">
+                            <svg class="connection-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.761H12.545z"/></svg>
+                            <span class="connection-name">Google</span>
+                        </div>
+                        <span class="connection-status active">Connected</span>
+                    </div>
+                    <div class="connection-item">
+                        <div class="connection-info">
+                            <svg class="connection-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2C6.477,2,2,6.477,2,12c0,4.419,2.865,8.166,6.839,9.489c0.5,0.09,0.682-0.217,0.682-0.482c0-0.237-0.008-0.866-0.012-1.699c-2.782,0.604-3.369-1.341-3.369-1.341c-0.454-1.153-1.11-1.46-1.11-1.46c-0.908-0.62,0.069-0.608,0.069-0.608c1.003,0.07,1.531,1.03,1.531,1.03c0.892,1.529,2.341,1.087,2.91,0.831c0.092-0.646,0.35-1.087,0.636-1.337c-2.22-0.253-4.555-1.11-4.555-4.943c0-1.091,0.39-1.984,1.029-2.683c-0.103-0.253-0.446-1.27,0.098-2.647c0,0,0.84-0.269,2.75,1.025C11.545,5.801,12.428,5.669,13,5.663c0.571,0.006,1.455,0.138,2.253,0.363c1.91-1.294,2.75-1.025,2.75-1.025c0.545,1.377,0.201,2.394,0.1,2.647c0.64,0.699,1.028,1.592,1.028,2.683c0,3.842-2.338,4.687-4.566,4.935c0.359,0.309,0.678,0.919,0.678,1.852c0,1.336-0.012,2.415-0.012,2.743c0,0.267,0.18,0.577,0.688,0.48C19.138,20.161,22,16.416,22,12C22,6.477,17.523,2,12,2z"/></svg>
+                            <span class="connection-name">GitHub</span>
+                        </div>
+                        <span class="connection-status active">Connected</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="profile-content">
+            
+            <!-- Account Statistics -->
+            <div class="profile-card" style="margin-bottom: var(--space-xl);">
+                <h3 class="card-title">Account Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value" data-target="24">0</div>
+                        <div class="stat-label">Projects Created</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" data-target="1842">0</div>
+                        <div class="stat-label">AI Chats</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" data-target="350">0</div>
+                        <div class="stat-label">Images Generated</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" data-target="12">0</div>
+                        <div class="stat-label">Resumes Created</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" data-target="156">0</div>
+                        <div class="stat-label">Code Generations</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" data-target="4.2" data-suffix="GB">0</div>
+                        <div class="stat-label">Storage Used</div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <h3 class="card-title" style="margin-top: var(--space-xl);">Achievements</h3>
+                <div class="achievements-list">
+                    <div class="badge-item">🏆 Early Adopter</div>
+                    <div class="badge-item">🚀 1K+ Generations</div>
+                    <div class="badge-item">🧠 Prompt Engineer Lvl 5</div>
+                    <div class="badge-item">🎨 Visionary Creator</div>
+                    <div class="badge-item">💻 Code Ninja</div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Timeline -->
+            <div class="profile-card" style="margin-bottom: var(--space-xl);">
+                <h3 class="card-title">Recent Activity</h3>
+                
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Generated new Image Asset</div>
+                            <div class="timeline-meta">Image Generator • 2 hours ago</div>
+                            <p style="margin: 8px 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">"Cyberpunk cityscape with neon lights and flying cars in 8k resolution."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Refactored Authentication Logic</div>
+                            <div class="timeline-meta">Code Assistant • 5 hours ago</div>
+                            <p style="margin: 8px 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">Asked AI to optimize JWT validation in the Node.js backend.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Updated Frontend Developer Resume</div>
+                            <div class="timeline-meta">Resume Builder • Yesterday</div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Started Project "Genesis"</div>
+                            <div class="timeline-meta">System • 3 days ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="profile-card danger-zone">
+                <h3 class="card-title">Danger Zone</h3>
+                <p class="danger-zone-desc">Once you delete your account, there is no going back. Please be certain. All your projects, history, and generated assets will be permanently wiped from our servers.</p>
+                <div style="display: flex; gap: var(--space-md);">
+                    <button class="btn btn-danger">Delete Account</button>
+                    <button class="btn btn-ghost" style="color: var(--color-error); border: 1px solid var(--border-light);">Deactivate Temporarily</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" style="padding: var(--space-xl); background: var(--bg-surface); border-top: 1px solid var(--border-light); margin-top: auto;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.875rem;">
+            <div>&copy; 2026 AI.Core Inc. All rights reserved.</div>
+            <div style="display: flex; gap: var(--space-lg);">
+                <a href="#" style="color: inherit; text-decoration: none;">Privacy</a>
+                <a href="#" style="color: inherit; text-decoration: none;">Terms</a>
+                <a href="#" style="color: inherit; text-decoration: none;">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="../static/js/common.js"></script>
+    <script src="../static/js/profile.js"></script>
+</body>
+</html>

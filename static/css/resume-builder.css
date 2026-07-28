@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Resume Builder CSS
+   ========================================================================== */
+
+.resume-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: var(--space-xl);
+    height: calc(100vh - 120px);
+}
+
+/* Sidebar Editor */
+.resume-editor {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.editor-header {
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--border-light);
+    font-weight: 600;
+}
+
+.editor-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-md);
+}
+
+.editor-section {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.editor-section:last-child {
+    border-bottom: none;
+}
+
+.editor-section h4 {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* 3D Preview Area */
+.resume-preview-area {
+    background: repeating-linear-gradient(45deg, var(--bg-primary) 0, var(--bg-primary) 10px, transparent 10px, transparent 20px);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.preview-toolbar {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    z-index: var(--z-floating);
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.floating-resume-canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+
+@media (max-width: 1024px) {
+    .resume-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .resume-preview-area {
+        min-height: 500px;
+    }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium AI SaaS | Amplify Your Intelligence</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/base.css?v=2">
+    <link rel="stylesheet" href="../static/css/landing.css?v=3">
+</head>
+<body class="page-landing">
+    <!-- Loading Overlay -->
+    <div class="loading-container" id="loading-screen">
+        <div class="loading-canvas-container" id="loading-canvas"></div>
+        <div class="progress-wrapper">
+            <div class="progress-text">0%</div>
+            <div class="status-text">Booting core systems...</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-panel">
+        <div class="logo font-heading" style="font-weight: 700; font-size: 1.25rem;">
+            <span class="text-gradient">AI.</span>Core
+        </div>
+        <ul class="nav-links">
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+            <li><a href="/templates/public/pricing.html" class="nav-link">Pricing</a></li>
+        </ul>
+        <div class="nav-actions flex gap-sm">
+            <a href="/templates/auth/login.html" class="btn btn-ghost">Log In</a>
+            <a href="/templates/auth/register.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="hero-content">
+                <h1 class="hero-title">Amplify Your <br><span class="text-gradient">Intelligence.</span></h1>
+                <p class="hero-subtitle">The ultimate AI workspace for creators, developers, and visionaries. Build faster, design better, and automate everything.</p>
+                <div class="hero-actions">
+                    <a href="/templates/auth/register.html" class="btn btn-primary">Start Building Free</a>
+                    <a href="#demo" id="watch-demo-btn" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Watch Demo
+                    </a>
+                </div>
+            </div>
+            <div class="hero-canvas-container" id="hero-canvas">
+                <!-- Three.js renders here -->
+            </div>
+        </section>
+
+        <!-- Trusted By Section -->
+        <section class="trusted-by container mt-xl">
+            <h4 class="trusted-title">Trusted by innovative teams worldwide</h4>
+            <div class="trusted-logos">
+                <!-- Placeholder SVG logos -->
+                <svg viewBox="0 0 100 30" class="trusted-logo"><text x="0" y="20" font-family="Inter" font-weight="700" font-size="20">Acme Corp</text></svg>
+                <svg viewBox="0 0 100 30" class="trusted-logo"><text x="0" y="20" font-family="Inter" font-weight="700" font-size="20">Globex</text></svg>
+                <svg viewBox="0 0 100 30" class="trusted-logo"><text x="0" y="20" font-family="Inter" font-weight="700" font-size="20">Initech</text></svg>
+                <svg viewBox="0 0 100 30" class="trusted-logo"><text x="0" y="20" font-family="Inter" font-weight="700" font-size="20">Soylent</text></svg>
+            </div>
+        </section>
+
+        <!-- AI Tools Showcase (Horizontal Scroll) -->
+        <section id="features" class="showcase-section mt-xl">
+            <div class="container">
+                <div class="showcase-header">
+                    <h2>One Platform. <span class="text-gradient">Infinite Possibilities.</span></h2>
+                    <p>Stop jumping between tabs. Everything you need is natively integrated into one intelligent workspace.</p>
+                </div>
+            </div>
+            
+            <div class="showcase-track">
+                <!-- Tool 1 -->
+                <div class="card tool-card" style="border-radius: var(--radius-xl);">
+                    <img src="../static/images/features/conversational-ai.png" alt="Conversational AI" class="tool-card-img" loading="lazy">
+                    <div class="tool-card-content">
+                        <h3>Conversational AI</h3>
+                        <p style="color: #cbd5e1; margin-bottom: 0;">Context-aware chat that remembers your projects and writes like a human.</p>
+                    </div>
+                </div>
+                
+                <!-- Tool 2 -->
+                <div class="card tool-card" style="border-radius: var(--radius-xl);">
+                    <img src="../static/images/features/image-generator.png" alt="Image Generator" class="tool-card-img" loading="lazy">
+                    <div class="tool-card-content">
+                        <h3>Image Generator</h3>
+                        <p style="color: #cbd5e1; margin-bottom: 0;">Turn text into stunning, high-resolution masterpieces in seconds.</p>
+                    </div>
+                </div>
+
+                <!-- Tool 3 -->
+                <div class="card tool-card" style="border-radius: var(--radius-xl);">
+                    <img src="../static/images/features/code-assistant.png" alt="Code Assistant" class="tool-card-img" loading="lazy">
+                    <div class="tool-card-content">
+                        <h3>Code Assistant</h3>
+                        <p style="color: #cbd5e1; margin-bottom: 0;">Write, debug, and refactor code instantly with our IDE-like environment.</p>
+                    </div>
+                </div>
+                
+                <!-- Tool 4 -->
+                <div class="card tool-card" style="border-radius: var(--radius-xl);">
+                    <img src="../static/images/features/resume-builder.png" alt="Resume Builder" class="tool-card-img" loading="lazy">
+                    <div class="tool-card-content">
+                        <h3>Resume Builder</h3>
+                        <p style="color: #cbd5e1; margin-bottom: 0;">Generate ATS-friendly resumes tailored to specific job descriptions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow Timeline -->
+        <section id="how-it-works" class="timeline-section container mt-xl">
+            <h2 class="text-center mb-xl">How it <span class="text-gradient">Works</span></h2>
+            
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="timeline-content card">
+                        <h3>1. Provide Context</h3>
+                        <p>Feed the AI your raw ideas, documents, or data. The system automatically structures and learns from your context.</p>
+                    </div>
+                    <div class="timeline-point"></div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-content card">
+                        <h3>2. AI Processing</h3>
+                        <p>Our proprietary neural engine analyzes your request, fetching relevant data across your workspace.</p>
+                    </div>
+                    <div class="timeline-point"></div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-content card">
+                        <h3>3. Perfect Output</h3>
+                        <p>Get production-ready code, polished copy, or stunning visuals instantly. Export or iterate immediately.</p>
+                    </div>
+                    <div class="timeline-point"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Watch Demo Modal -->
+    <div id="demo-modal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <button id="close-modal-btn" class="modal-close" aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <h3>Demo <span class="text-gradient">Coming Soon</span></h3>
+                <p>We're finalizing the presentation. Check back soon!</p>
+            </div>
+            <div class="modal-video-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="border-top: 1px solid var(--border-light); padding: var(--space-xl) 0; margin-top: var(--space-2xl);">
+        <div class="container grid grid-cols-4">
+            <div>
+                <div class="logo font-heading" style="font-weight: 700; font-size: 1.25rem; margin-bottom: var(--space-sm);">
+                    <span class="text-gradient">AI.</span>Core
+                </div>
+                <p style="font-size: 0.875rem;">Building the future of human-computer interaction.</p>
+            </div>
+            <div>
+                <h4 style="font-size: 1rem;">Product</h4>
+                <ul class="flex flex-col gap-sm" style="font-size: 0.875rem; color: var(--text-secondary);">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Changelog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size: 1rem;">Company</h4>
+                <ul class="flex flex-col gap-sm" style="font-size: 0.875rem; color: var(--text-secondary);">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size: 1rem;">Legal</h4>
+                <ul class="flex flex-col gap-sm" style="font-size: 0.875rem; color: var(--text-secondary);">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="../static/js/common.js?v=2"></script>
+    <script src="../static/js/loader.js?v=1"></script>
+    <script src="../static/js/landing.js?v=2"></script>
+    <script src="../static/js/robot.js?v=8"></script>
+</body>
+</html>

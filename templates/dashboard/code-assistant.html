@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Assistant | Premium AI SaaS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/base.css">
+    <link rel="stylesheet" href="../../static/css/dashboard.css">
+    <link rel="stylesheet" href="../../static/css/code-assistant.css">
+</head>
+<body class="page-dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <span class="text-gradient">AI.</span>Core
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="/templates/dashboard/index.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                Dashboard
+            </a>
+            <a href="/templates/dashboard/chat.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                AI Chat
+            </a>
+            <a href="/templates/dashboard/image-generator.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                Image Gen
+            </a>
+            <a href="/templates/dashboard/resume-builder.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Resume Builder
+            </a>
+            <a href="/templates/dashboard/code-assistant.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                Code Assistant
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search files (Cmd+P)...">
+            </div>
+            <div class="topbar-actions">
+                <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Deploy</button>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <div class="code-layout">
+                
+                <!-- File Explorer -->
+                <div class="file-explorer">
+                    <div class="explorer-header">Explorer</div>
+                    <div class="file-list">
+                        <div class="file-item active">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                            main.js
+                        </div>
+                        <div class="file-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                            utils.js
+                        </div>
+                        <div class="file-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                            styles.css
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editor -->
+                <div class="editor-area">
+                    <div class="editor-tabs">
+                        <div class="tab">main.js</div>
+                    </div>
+                    <pre class="code-view"><code>import { validateUser } from './utils.js';
+
+async function handleLogin(req, res) {
+    const { username, password } = req.body;
+    
+    try {
+        const isValid = await validateUser(username, password);
+        
+        if (isValid) {
+            // Let the AI write the JWT logic
+            // @AI: Implement secure JWT generation here
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}</code></pre>
+                    
+                    <!-- 3D Processor Overlay -->
+                    <div id="processor-canvas" class="processor-canvas-container"></div>
+                </div>
+
+                <!-- AI Sidebar -->
+                <div class="ai-sidebar">
+                    <div class="ai-header">AI Assistant</div>
+                    <div class="ai-chat">
+                        <div style="color: var(--text-secondary); margin-bottom: 1rem;">Select code and press Cmd+I to ask the AI to refactor, debug, or explain.</div>
+                    </div>
+                    <div class="ai-input-area">
+                        <textarea class="ai-input" rows="2" placeholder="Ask AI to write code..."></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../../static/js/common.js"></script>
+    <script src="../../static/js/code-assistant.js"></script>
+</body>
+</html>

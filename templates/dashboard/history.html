@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | Premium AI SaaS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/base.css">
+    <link rel="stylesheet" href="../../static/css/dashboard.css">
+    <link rel="stylesheet" href="../../static/css/history.css">
+</head>
+<body class="page-dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <span class="text-gradient">AI.</span>Core
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="/templates/dashboard/index.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                Dashboard
+            </a>
+            <a href="/templates/dashboard/chat.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                AI Chat
+            </a>
+            <a href="/templates/dashboard/image-generator.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                Image Gen
+            </a>
+            <a href="/templates/dashboard/resume-builder.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Resume Builder
+            </a>
+            <a href="/templates/dashboard/code-assistant.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                Code Assistant
+            </a>
+            <a href="/templates/dashboard/history.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                History
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search history...">
+            </div>
+            <div class="topbar-actions">
+                <div class="user-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--gradient-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">JS</div>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <div class="history-layout">
+                <div class="history-header">
+                    <h2 style="margin: 0; font-size: 1.25rem;">Generation History</h2>
+                    <div class="history-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="image">Images</button>
+                        <button class="filter-btn" data-filter="chat">Chats</button>
+                        <button class="filter-btn" data-filter="code">Code</button>
+                        <button class="filter-btn" data-filter="resume">Resumes</button>
+                    </div>
+                </div>
+
+                <div class="history-content">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Preview</th>
+                                <th>Type</th>
+                                <th>Prompt / Title</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="history-row" data-type="image">
+                                <td>
+                                    <div class="thumbnail" style="background: url('https://placehold.co/40x40/5B5CEB/FFFFFF') center/cover;"></div>
+                                </td>
+                                <td><span class="type-badge type-image">Image</span></td>
+                                <td style="font-weight: 500;">Futuristic Cityscape at sunset, cyberpunk...</td>
+                                <td style="color: var(--text-secondary); font-size: 0.875rem;">Today, 10:42 AM</td>
+                                <td><button class="btn btn-ghost" style="padding: 4px 8px;">View</button></td>
+                            </tr>
+                            <tr class="history-row" data-type="chat">
+                                <td>
+                                    <div class="thumbnail flex items-center justify-center" style="background: var(--bg-primary);">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-secondary);"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </div>
+                                </td>
+                                <td><span class="type-badge type-chat">Chat</span></td>
+                                <td style="font-weight: 500;">Marketing Copywriter System Prompt</td>
+                                <td style="color: var(--text-secondary); font-size: 0.875rem;">Yesterday</td>
+                                <td><button class="btn btn-ghost" style="padding: 4px 8px;">View</button></td>
+                            </tr>
+                            <tr class="history-row" data-type="code">
+                                <td>
+                                    <div class="thumbnail flex items-center justify-center" style="background: var(--bg-primary);">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-secondary);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                    </div>
+                                </td>
+                                <td><span class="type-badge type-code">Code</span></td>
+                                <td style="font-weight: 500;">JWT Authentication Implementation</td>
+                                <td style="color: var(--text-secondary); font-size: 0.875rem;">Oct 12, 2026</td>
+                                <td><button class="btn btn-ghost" style="padding: 4px 8px;">View</button></td>
+                            </tr>
+                            <tr class="history-row" data-type="resume">
+                                <td>
+                                    <div class="thumbnail flex items-center justify-center" style="background: var(--bg-primary);">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-secondary);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                                    </div>
+                                </td>
+                                <td><span class="type-badge type-resume">Resume</span></td>
+                                <td style="font-weight: 500;">Senior Frontend Engineer ATS Resume</td>
+                                <td style="color: var(--text-secondary); font-size: 0.875rem;">Oct 10, 2026</td>
+                                <td><button class="btn btn-ghost" style="padding: 4px 8px;">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="../../static/js/common.js"></script>
+    <script src="../../static/js/history.js"></script>
+</body>
+</html>

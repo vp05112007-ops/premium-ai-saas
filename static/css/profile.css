@@ -1,0 +1,303 @@
+/* ==========================================================================
+   Profile Page CSS
+   ========================================================================== */
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--space-xl) * 2) var(--space-lg) var(--space-xl);
+}
+
+@media (min-width: 1024px) {
+    .profile-layout {
+        grid-template-columns: 350px 1fr;
+        align-items: start;
+    }
+}
+
+/* Base Card Style */
+.profile-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+/* User Header (Top/Left) */
+.user-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: var(--space-md);
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bg-primary);
+    box-shadow: 0 10px 30px rgba(91, 92, 235, 0.2);
+}
+
+.avatar-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background: var(--color-success);
+    border: 3px solid var(--bg-surface);
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+    letter-spacing: -0.02em;
+}
+
+.user-tagline {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-lg);
+}
+
+.user-header .btn {
+    width: 100%;
+}
+
+/* Personal Info List */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Account Statistics Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.stat-box {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Recent Activity Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: var(--border-light);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--space-lg);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg-surface);
+    border: 2px solid var(--color-primary);
+    z-index: 2;
+}
+
+.timeline-content {
+    background: var(--bg-primary);
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+}
+
+.timeline-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+}
+
+.timeline-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Achievements Section */
+.achievements-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(91, 92, 235, 0.05);
+    border: 1px solid rgba(91, 92, 235, 0.15);
+    border-radius: var(--radius-pill);
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Connected Accounts */
+.connection-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.connection-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    background: var(--bg-primary);
+}
+
+.connection-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.connection-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.connection-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.connection-status {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.connection-status.active {
+    color: var(--color-success);
+}
+
+/* Danger Zone */
+.danger-zone {
+    border-color: rgba(235, 91, 91, 0.3);
+}
+
+.danger-zone .card-title {
+    color: var(--color-error);
+}
+
+.danger-zone-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.btn-danger {
+    background: rgba(235, 91, 91, 0.1);
+    color: var(--color-error);
+    border: 1px solid rgba(235, 91, 91, 0.2);
+}
+
+.btn-danger:hover {
+    background: var(--color-error);
+    color: white;
+}

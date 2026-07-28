@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Image Generator CSS
+   ========================================================================== */
+
+.generator-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: var(--space-xl);
+    height: calc(100vh - 120px);
+}
+
+.canvas-area {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+}
+
+.image-preview {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-conic-gradient(var(--bg-primary) 0% 25%, transparent 0% 50%) 50% / 20px 20px;
+    padding: var(--space-lg);
+    position: relative;
+}
+
+.generated-image-container {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    display: none; /* hidden until generated */
+    position: relative;
+}
+
+.generated-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 3D Camera Lens Placeholder */
+.lens-container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.prompt-bar {
+    padding: var(--space-md);
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    gap: var(--space-md);
+}
+
+.prompt-input {
+    flex: 1;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.prompt-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(91, 92, 235, 0.1);
+}
+
+/* Controls Sidebar */
+.controls-area {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    padding: var(--space-lg);
+    overflow-y: auto;
+    box-shadow: var(--shadow-sm);
+}
+
+.controls-area h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-lg);
+}
+
+.control-group {
+    margin-bottom: var(--space-lg);
+}
+
+.control-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+    color: var(--text-secondary);
+}
+
+.style-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+}
+
+.style-btn {
+    padding: 0.5rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.style-btn:hover, .style-btn.active {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: rgba(91, 92, 235, 0.05);
+}
+
+/* Custom Range Slider */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    cursor: pointer;
+    margin-top: -6px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: var(--border-light);
+    border-radius: 2px;
+}
+
+
+@media (max-width: 1024px) {
+    .generator-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}

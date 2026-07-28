@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Premium AI SaaS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/base.css">
+    <link rel="stylesheet" href="../../static/css/auth.css">
+</head>
+<body class="auth-page">
+
+    <div class="auth-bg-shape shape-1"></div>
+    <div class="auth-bg-shape shape-2"></div>
+
+    <main class="auth-container">
+        <div class="auth-header">
+            <a href="/templates/index.html" style="text-decoration: none; color: inherit; display: inline-block; margin-bottom: var(--space-md);">
+                <div style="font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em;">
+                    <span class="text-gradient">AI.</span>Core
+                </div>
+            </a>
+            <h1>Create an account</h1>
+            <p>Start your 14-day free trial. No credit card required.</p>
+        </div>
+
+        <form class="auth-form" action="../dashboard/index.html">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                <div class="form-group">
+                    <label for="fname">First name</label>
+                    <input type="text" id="fname" class="auth-input" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" class="auth-input" placeholder="Smith" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Work email</label>
+                <input type="email" id="email" class="auth-input" placeholder="name@company.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="auth-input" placeholder="Create a strong password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary auth-btn">Get Started</button>
+            
+            <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: -10px;">
+                By signing up, you agree to our <a href="#" style="color: var(--text-secondary);">Terms of Service</a> and <a href="#" style="color: var(--text-secondary);">Privacy Policy</a>.
+            </p>
+        </form>
+
+        <div class="auth-footer">
+            Already have an account? <a href="login.html">Sign in</a>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="../../static/js/common.js"></script>
+    <script>
+        gsap.from(".auth-container", {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out"
+        });
+    </script>
+</body>
+</html>

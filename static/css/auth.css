@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Auth CSS
+   ========================================================================== */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% -20%, var(--bg-surface) 0%, var(--bg-primary) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+    padding: var(--space-xl);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    z-index: 10;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.auth-header h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.auth-header p {
+    color: var(--text-secondary);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+}
+
+.auth-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(91, 92, 235, 0.1);
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: var(--space-md);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: var(--space-xl);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.auth-footer a {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Abstract Background Shapes */
+.auth-bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    opacity: 0.4;
+    animation: float 20s infinite ease-in-out alternate;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(91, 92, 235, 0.3);
+    top: -100px;
+    left: -100px;
+}
+
+.shape-2 {
+    width: 500px;
+    height: 500px;
+    background: rgba(139, 92, 246, 0.2);
+    bottom: -150px;
+    right: -150px;
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
+}
