@@ -1,0 +1,32 @@
+[build]
+publish = "."
+
+[[redirects]]
+from = "/"
+to = "/templates/index.html"
+status = 200
+
+[[redirects]]
+from = "/auth/*"
+to = "/templates/auth/:splat"
+status = 200
+
+[[redirects]]
+from = "/public/*"
+to = "/templates/public/:splat"
+status = 200
+
+[[redirects]]
+from = "/dashboard/*"
+to = "/templates/dashboard/:splat"
+status = 200
+
+[[redirects]]
+from = "/profile.html"
+to = "/templates/profile.html"
+status = 200
+
+[[redirects]]
+from = "/settings.html"
+to = "/templates/settings.html"
+status = 200
