@@ -1,8 +1,19 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/static/:path*",
-      "destination": "/static/:path*"
+      "source": "/",
+      "destination": "/templates/index.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/templates/index.html"
+    },
+    {
+      "source": "/templates/:path*",
+      "destination": "/templates/:path*"
     },
     {
       "source": "/auth/:path*",
@@ -25,12 +36,8 @@
       "destination": "/templates/settings.html"
     },
     {
-      "source": "/index.html",
-      "destination": "/templates/index.html"
-    },
-    {
-      "source": "/",
-      "destination": "/templates/index.html"
+      "source": "/static/:path*",
+      "destination": "/static/:path*"
     }
   ]
 }
